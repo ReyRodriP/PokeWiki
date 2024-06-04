@@ -1,24 +1,98 @@
-header{
-    background-color: #ffffff;
-    display: flex;
-    min-height: 150px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
-@media (max-width: 700px){
-    header{
-        flex-direction: column;
-    }
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.Encabezado img{
-    height: 145px;
-    margin-right: 10px;
-    margin-left: 20px;
+.back{
+  padding: 32px 0;
+  background-color: #ffffff;
 }
 
+.menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.logo{
+  font-size: 24px;
+  color: black;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.menu .navbar ul li{
+  position: relative;
+  float: left;
+}
+
+.menu .navbar ul li a{
+  font-size: 18px;
+  padding: 20px;
+  color: #ffffff;
+  display: block;
+}
+
+.menu .navbar ul li a:hover{
+  color:rgb(242, 174, 48);
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label{
+  cursor: pointer;
+  display: none;
+}
+
+@media(max-width:991px){
+  .menu {
+    padding: 30px;
+  }
+
+  .menu label {
+    display: initial;
+  }
+
+  .back{
+    padding: 47px 0;
+  }
+
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color:#000000;
+    display: none;
+  }
+
+  .menu .navbar ul li {
+    width: 100%;
+  }
+
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+}
 body {
     background: rgb(85, 144, 189);
     background: linear-gradient(
@@ -33,13 +107,11 @@ body {
 
   }
 
-  a{
-    text-decoration: none;
-    color: rgb(242, 174, 48);
-
-}
-
+  h1{
+    padding-top: 20px;
+  }
   .Textos {
+    padding: 20px;
     text-align: justify;
   }
   
