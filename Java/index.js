@@ -2,6 +2,7 @@ const pokemonContainer = document.querySelector(".pokemon-container");
 
 function fetchPokemon(id) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+
     .then((res) => res.json())
     .then((data) => {
         createPokemon(data);
@@ -40,4 +41,4 @@ function createPokemon(pokemon) {
     pokemonContainer.appendChild(card);
 }
 
-fetchPokemons(21);
+fetchPokemons(151);
